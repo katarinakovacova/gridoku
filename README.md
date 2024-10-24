@@ -44,6 +44,12 @@ Welcome to **Gridoku**, the ultimate Sudoku game application! This containerized
 5. Keep an eye on the error counter to monitor your accuracy.
 6. The game pauses (blurs) when you stop the timer, and you can't make moves until the timer is restarted.
 
+## Demo
+
+Check out the demo of my Sudoku web app, Gridoku, on YouTube:
+
+[Gridoku: My First Full-Stack Project – A Web App for Solving Sudoku](https://www.youtube.com/shorts/vdlubE2tFJA)
+
 ## Technologies Used
 - **Python** (Django)
 - **Docker** for containerization
