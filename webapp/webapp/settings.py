@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'sudoku_site.urls'
+ROOT_URLCONF = 'webapp.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'sudoku_site.wsgi.application'
+WSGI_APPLICATION = 'webapp.wsgi.application'
 
 
 # Database
