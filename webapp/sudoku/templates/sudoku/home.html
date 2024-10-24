@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridoku</title>
+    <link rel="stylesheet" href="{% static 'sudoku/css/style.css' %}">
+    <script src="{% static 'sudoku/js/script.js' %}"></script>
+</head>
+<body onload="toggleTimer()">
+<div class="content">
+    <div class="header">
+        <h1>Gridoku</h1>
+    </div>
+
+    <ul class="menu">
+        <li class="dropdown">
+            <button class="menu-button">New Sudoku</button>
+            <div class="dropdown-content">
+              <a href="/sudoku?level=easy">Easy</a>
+              <a href="/sudoku?level=medium">Medium</a>
+              <a href="/sudoku?level=hard">Hard</a>
+            </div>
+        </li>
+        <li class="timer">
+            <button class="menu-button" id="timerButton" onclick="toggleTimer()">00:00</button>
+        </li>
+
+        <li class="mistake">
+            <button class="menu-button" data-mistakes="0">0 Mistakes</button>
+        </li>
+        <li class="hint">
+            <button class="menu-button">Hint</button>
+        </li>
+    </ul>
+
+    <div class="level">
+        <h3>Level of Sudoku: {{ level|title }}</h3>
+    </div>
+
+    <div class="number-container">
+        {% for row in sudoku_puzzles %}
+            {% for origin_cell, cell in row %}
+                {% if cell > 0 %}
+                    <div class="number-cell number-cell-origin" data-origin="{{ origin_cell }}" data-y="{{ forloop.parentloop.counter }}">{{ cell }}</div>
+                {% else %}
+                    <div class="number-cell" data-origin="{{ origin_cell }}" data-y="{{ forloop.parentloop.counter }}"></div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="number-container">
+        {% for i in '123456789' %}
+            <button class="number-cell number-cell-selector">{{ i }}</button>
+        {% endfor %}
+    </div>
+
+    <div class="attempts">
+        <p>Number of unsuccessful attempts: {{ n_attempts }}</p>
+    </div>
+
+</div>
+</body>
+</html>
