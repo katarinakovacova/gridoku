@@ -30,4 +30,4 @@ def home(request):
         'level': level,
     }
     
-    return render(request, 'home.html', context)
+    return render(request, 'sudoku/home.html', context)
