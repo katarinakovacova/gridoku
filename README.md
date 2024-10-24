@@ -46,6 +46,10 @@ Welcome to **Gridoku**, the ultimate Sudoku game application! This containerized
 
 ## Demo
 
+## Sudoku Game Interface
+
+![Sudoku Game Interface](sudoku/static/sudoku/images/sudoku_site.png)
+
 Check out the demo of my Sudoku web app, Gridoku, on YouTube:
 
 [Gridoku: My First Full-Stack Project – A Web App for Solving Sudoku](https://www.youtube.com/shorts/vdlubE2tFJA)
