@@ -48,7 +48,7 @@ Welcome to **Gridoku**, the ultimate Sudoku game application! This containerized
 
 ## Sudoku Game Interface
 
-![Sudoku Game Interface](sudoku/static/sudoku/images/gridoku_site.png)
+![Popis obrázka](webapp/sudoku/static/sudoku/images/gridoku_site.png)
 
 Check out the demo of my Sudoku web app, Gridoku, on YouTube:
 
